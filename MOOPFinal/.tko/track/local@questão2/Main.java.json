@@ -1,0 +1,139 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-15_18-00-26",
+            "content": "@@ -958,24 +958,25 @@\n ;%0A    %7D%0A    \n+%5D\n %0A    public \n@@ -2113,16 +2113,17 @@\n   %7D%0A  %7D%0A\n+%7D\n %0A%0A%0A// ==\n@@ -2678,17 +2678,17 @@\n s.get(i)\n-.\n+(\n equals(n\n@@ -2692,16 +2692,17 @@\n s(nome))\n+)\n %7B%0A      \n@@ -2755,20 +2755,9 @@\n    %7D\n- else %7B%0A    \n+%0A\n     \n@@ -2781,35 +2781,8 @@\n ll;%0A\n-            %7D%0A            %0A\n     \n",
+            "lines": "165"
+        },
+        {
+            "label": "2025-12-15_18-01-53",
+            "content": "@@ -860,24 +860,32 @@\n ome;%0A       \n+boolean \n afinado = fa\n@@ -2467,17 +2467,16 @@\n trumento\n-s\n .add(i);\n",
+            "lines": "167"
+        },
+        {
+            "label": "2025-12-15_18-03-10",
+            "content": "@@ -1268,14 +1268,17 @@\n    %0A\n+    \n %7D%0A%7D%0A%0A\n-%0A\n // =\n",
+            "lines": "167"
+        },
+        {
+            "label": "2025-12-15_18-03-54",
+            "content": "@@ -803,32 +803,49 @@\n ento(String nome\n+, boolean afinado\n ) %7B%0A       this.\n@@ -1527,32 +1527,49 @@\n olao(String nome\n+, boolean afinado\n )%7B%0A    super(nom\n@@ -1561,32 +1561,41 @@\n %7B%0A    super(nome\n+, afinado\n );%0A  %7D%0A%0A  public\n@@ -1762,16 +1762,33 @@\n ing nome\n+, boolean afinado\n )%7B%0A    s\n@@ -1792,24 +1792,33 @@\n   super(nome\n+, afinado\n );%0A  %7D%0A%0A  pu\n",
+            "lines": "168"
+        },
+        {
+            "label": "2025-12-15_18-05-20",
+            "content": "@@ -2581,17 +2581,16 @@\n    if(in\n-s\n trumento\n@@ -2638,17 +2638,16 @@\n eturn in\n-s\n trumento\n@@ -2928,17 +2928,16 @@\n intln(in\n-s\n trumento\n",
+            "lines": "168"
+        },
+        {
+            "label": "2025-12-15_18-05-59",
+            "content": "@@ -390,10 +390,38 @@\n nome\n-, \n+);%0A        System.out.println(\n %22O i\n",
+            "lines": "168"
+        },
+        {
+            "label": "2025-12-15_18-07-32",
+            "content": "@@ -382,16 +382,22 @@\n   super(\n+nome, \n %22O instr\n",
+            "lines": "167"
+        },
+        {
+            "label": "2025-12-15_18-08-31",
+            "content": "@@ -1203,24 +1203,16 @@\n        %7D\n- else %7B%0A\n %0A       \n@@ -1212,22 +1212,17 @@\n         \n-%7D%0A    \n+%0A\n %7D%0A%7D%0A%0A%0A//\n@@ -1530,37 +1530,24 @@\n ng tocar()%7B%0A\n-    try%7B%0A    \n     if(afina\n@@ -1551,34 +1551,32 @@\n inado == true)%7B%0A\n-  \n         return %22\n@@ -1617,163 +1617,10 @@\n     \n-    %7D%0A    %7Dcatch(InstrumentoDesafinadoException e)%7B%0A        System.out.println(%22O instrumento %22 + nome + %22 esta desafinado! Nao pode tocar.%22);%0A        %7D%0A  \n+%7D%0A\n   %7D%0A\n",
+            "lines": "167"
+        },
+        {
+            "label": "2025-12-15_18-11-24",
+            "content": "@@ -1117,21 +1117,8 @@\n n %7B%0A\n-        try%7B%0A\n     \n@@ -1134,32 +1134,34 @@\n inado == true)%7B%0A\n+  \n           return\n@@ -1207,156 +1207,21 @@\n    %7D\n-%0A    %7Dcatch(InstrumentoDesafinadoException e)%7B%0A        System.out.println(%22O instrumento %22 + nome + %22 esta desafinado! Nao pode tocar.%22);%0A        %7D%0A\n+ else %7B%0A%0A    \n     \n",
+            "lines": "172"
+        },
+        {
+            "label": "2025-12-15_18-12-29",
+            "content": "@@ -1370,24 +1370,25 @@\n     %7D%0A    %7D%0A\n+%7D\n %0A%0A%0A// ======\n",
+            "lines": "175"
+        },
+        {
+            "label": "2025-12-15_18-12-37",
+            "content": "@@ -1209,31 +1209,26 @@\n .%22;%0A        \n- \n %7D%0A\n-    \n     %7Dcatch(I\n@@ -1257,28 +1257,24 @@\n ception e)%7B%0A\n-    \n         Syst\n@@ -1356,34 +1356,26 @@\n %22);%0A        \n-    %7D%0A    \n+%7D%0A\n     %7D%0A    %7D%0A\n",
+            "lines": "175"
+        },
+        {
+            "label": "2025-12-15_18-13-27",
+            "content": "@@ -1202,24 +1202,34 @@\n enerico.%22;%0A \n+        %7D%0A\n         %7Dcat\n",
+            "lines": "175"
+        },
+        {
+            "label": "2025-12-15_18-14-10",
+            "content": "@@ -1259,39 +1259,52 @@\n  e)%7B%0A           \n-return \n+ System.out.println(\n %22O instrumento %22\n@@ -1348,16 +1348,17 @@\n  tocar.%22\n+)\n ;%0A      \n",
+            "lines": "174"
+        },
+        {
+            "label": "2025-12-15_18-14-42",
+            "content": "@@ -1130,28 +1130,24 @@\n ry%7B%0A        \n-    \n if(afinado =\n@@ -1147,34 +1147,32 @@\n inado == true)%7B%0A\n-  \n           return\n@@ -1206,29 +1206,16 @@\n ico.%22;%0A \n-           %7D%0A\n         \n@@ -1267,36 +1267,23 @@\n         \n- System.out.println(\n+return \n %22O instr\n@@ -1327,33 +1327,32 @@\n Nao pode tocar.%22\n-)\n ;%0A            %7D%0A\n@@ -1355,21 +1355,24 @@\n   %7D%0A\n+    \n     %7D%0A\n-\n     %7D%0A\n-%7D\n %0A%0A%0A/\n",
+            "lines": "174"
+        },
+        {
+            "label": "2025-12-15_18-16-34",
+            "content": "@@ -1130,32 +1130,35 @@\n ry%7B%0A            \n+if(\n afinado == true%0A\n@@ -1156,16 +1156,18 @@\n  == true\n+)%7B\n %0A       \n@@ -1215,32 +1215,33 @@\n .%22;%0A            \n+%7D\n %0A        %7Dcatch(\n@@ -1271,19 +1271,16 @@\n ception \n-nom\n e)%7B%0A    \n",
+            "lines": "175"
+        },
+        {
+            "label": "2025-12-15_18-17-51",
+            "content": "@@ -1118,32 +1118,60 @@\n  %7B%0A        try%7B%0A\n+            afinado == true%0A\n             retu\n@@ -1206,24 +1206,32 @@\n rico.%22;%0A    \n+        \n %0A        %7Dca\n",
+            "lines": "175"
+        },
+        {
+            "label": "2025-12-15_18-18-55",
+            "content": "@@ -1221,32 +1221,35 @@\n finadoException \n+nom\n e)%7B%0A            \n",
+            "lines": "174"
+        },
+        {
+            "label": "2025-12-15_18-19-10",
+            "content": "@@ -1354,16 +1354,18 @@\n %7D%0A    %7D%0A\n+%7D%0A\n %0A%0A// ===\n",
+            "lines": "174"
+        },
+        {
+            "label": "2025-12-15_18-19-26",
+            "content": "@@ -1269,30 +1269,68 @@\n ln(%22\n-Teste %22+e.getMessage()\n+O instrumento %22 + nome + %22 esta desafinado! Nao pode tocar.%22\n );%0A \n",
+            "lines": "173"
+        },
+        {
+            "label": "2025-12-15_18-20-23",
+            "content": "@@ -1244,22 +1244,16 @@\n         \n-return\n  System.\n",
+            "lines": "173"
+        },
+        {
+            "label": "2025-12-15_18-20-53",
+            "content": "@@ -1251,16 +1251,34 @@\n  return \n+System.out.println\n (%22Teste \n",
+            "lines": "173"
+        },
+        {
+            "label": "2025-12-15_18-21-17",
+            "content": "@@ -1120,37 +1120,26 @@\n %0A       \n-if(afinado == true)%7B%0A\n+ try%7B%0A    \n         \n@@ -1186,16 +1186,57 @@\n     \n-   %7Delse\n+%0A        %7Dcatch(InstrumentoDesafinadoException e)\n %7B%0A  \n@@ -1245,78 +1245,50 @@\n     \n+ \n+  \n return \n-%22O instrumento %22 + nome + %22 esta desafinado! Nao pode tocar.%22;%0A\n+(%22Teste %22+e.getMessage());%0A     \n     \n",
+            "lines": "173"
+        },
+        {
+            "label": "2025-12-15_18-23-49",
+            "content": "@@ -1611,32 +1611,45 @@\n String tocar()%7B%0A\n+    try%7B%0A    \n     if(afinado =\n@@ -1669,24 +1669,25 @@\n     \n+  \n return \n-%22\n %22Violao \n + no\n@@ -1682,25 +1682,23 @@\n %22Violao \n+%22\n +\n- \n nome\n- + \n++\n %22 tocou:\n@@ -1716,38 +1716,92 @@\n %0A       \n-%7Delse%7B%0A        return \n+ %7D%0A    %7Dcatch(InstrumentoDesafinadoException e)%7B%0A        System.out.println(\n %22O instr\n@@ -1845,34 +1845,36 @@\n Nao pode tocar.%22\n+)\n ;%0A\n+ \n        %7D%0A %7D%0A%0Acla\n@@ -1866,16 +1866,22 @@\n       %7D%0A\n+    %7D%0A\n  %7D%0A%0Aclas\n@@ -1984,24 +1984,37 @@\n ng tocar()%7B%0A\n+    try%7B%0A    \n     if(afina\n@@ -2026,32 +2026,34 @@\n  true)%7B%0A        \n+  \n return %22Piano %22+\n@@ -2052,24 +2052,21 @@\n Piano %22+\n- \n nome\n- + \n++\n %22 tocou:\n@@ -2091,38 +2091,92 @@\n %0A       \n-%7Delse%7B%0A        return \n+ %7D%0A    %7Dcatch(InstrumentoDesafinadoException e)%7B%0A        System.out.println(\n %22O instr\n@@ -2220,37 +2220,45 @@\n Nao pode tocar.%22\n+)\n ;%0A   \n+     %7D%0A\n     %7D%0A  %7D%0A%0A%0A%0A// \n",
+            "lines": "172"
+        },
+        {
+            "label": "2025-12-15_18-25-52",
+            "content": "@@ -1215,54 +1215,76 @@\n     \n-throw new InstrumentoDesafinadoException(nome)\n+return %22O instrumento %22 + nome + %22 esta desafinado! Nao pode tocar.%22\n ;%0A  \n@@ -1663,17 +1663,16 @@\n urn \n+%22\n %22Violao\n- %22\n  + n\n@@ -1723,54 +1723,76 @@\n     \n-throw new InstrumentoDesafinadoException(nome)\n+return %22O instrumento %22 + nome + %22 esta desafinado! Nao pode tocar.%22\n ;%0A  \n@@ -2024,54 +2024,76 @@\n     \n-throw new InstrumentoDesafinadoException(nome)\n+return %22O instrumento %22 + nome + %22 esta desafinado! Nao pode tocar.%22\n ;%0A  \n",
+            "lines": "166"
+        },
+        {
+            "label": "2025-12-15_18-28-17",
+            "content": "@@ -5228,16 +5228,17 @@\n .close();%0A    %7D%0A\n+%7D\n",
+            "lines": "166"
+        },
+        {
+            "label": "2025-12-15_18-29-17",
+            "content": "@@ -5236,11 +5236,8 @@\n ;%0A    %7D%0A\n-%7D%0A%7D\n",
+            "lines": "165"
+        },
+        {
+            "label": "2025-12-15_18-29-48",
+            "content": "import java.util.ArrayList;\nimport java.util.Scanner;\n\n// ==================================================================================\n// PASSO 2: EXCE\u00c7\u00c3O PERSONALIZADA\n// ==================================================================================\nclass InstrumentoDesafinadoException extends Exception {\n    public InstrumentoDesafinadoException(String nome) {\n        super(\"O instrumento \" + nome + \" esta desafinado! Nao pode tocar.\");\n    }\n}\n\n// ==================================================================================\n// PASSO 1: CLASSE PAI (INSTRUMENTO)\n// ==================================================================================\nclass Instrumento {\n    protected String nome;\n    protected boolean afinado;\n\n    public Instrumento(String nome) {\n       this.nome = nome;\n       afinado = false;\n    }\n\n    public String getNome() {\n        return this.nome;\n    }\n    \n    public String afinar() {\n        afinado = true;\n        return \"O instrumento \"+nome+\" foi afinado com sucesso!\";\n    }\n\n    // PASSO 2: \n    public String tocar() throws InstrumentoDesafinadoException {\n       if(afinado == true){\n        return \"Tocando instrumento generico.\";\n       }else{\n        throw new InstrumentoDesafinadoException(nome);\n       }\n    }\n    }\n\n\n// ==================================================================================\n// PASSO 3: CLASSES FILHAS\n\n\n// ==================================================================================\n\n class Violao extends Instrumento {\n  public Violao(String nome){\n    super(nome);\n  }\n\n  public String tocar(){\n    if(afinado == true){\n        return \"Violao \" + nome + \" tocou: STRUMMM!\";\n       }else{\n        throw new InstrumentoDesafinadoException(nome);\n       }\n }\n\nclass Piano extends Instrumento {\n    public Piano(String nome){\n    super(nome);\n  }\n\n  public String tocar(){\n    if(afinado == true){\n        return \"Piano \"+ nome + \" tocou: PLIN PLIN PLIN!\";\n       }else{\n        throw new InstrumentoDesafinadoException(nome);\n       }\n  }\n\n\n\n// ==================================================================================\n// PASSO 4: O PALCO (GERENCIADOR)\n// ==================================================================================\nclass Palco {\n    private ArrayList<Instrumento> instrumentos = new ArrayList<>();\n\n    public void adicionar(Instrumento i) {\n        instrumentos.add(i);\n        System.out.println(i.nome +\" adicionado ao palco.\");\n    }\n\n    public Instrumento buscar(String nome) {\n        for(int i = 0; i < instrumentos.size(); i++){\n            if(instrumentos.get(i).equals(nome)){\n                return instrumentos.get(i);\n            } else {\n                return null;\n            }\n            \n        }\n        \n    }\n\n    public void showAoVivo() {\n        System.out.println(\"--- INICIANDO O SHOW ---\");\n       for(int i = 0; i < instrumentos.size(); i++){\n        System.out.println(instrumentos.get(i).tocar());\n       }\n        \n        System.out.println(\"--- FIM DO SHOW ---\");\n    }\n}\n\n// ==================================================================================\n// MAIN\n// ==================================================================================\npublic class Main {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        Palco palco = new Palco();\n\n        while (true) {\n            if (!scanner.hasNextLine()) break;\n            String linha = scanner.nextLine().trim();\n            if (linha.isEmpty()) continue;\n            \n            System.out.println(\"$\" + linha);\n            String[] tokens = linha.split(\" \");\n            String cmd = tokens[0].toLowerCase();\n\n            try {\n                if (cmd.equals(\"end\")) {\n                    break;\n                } else if (cmd.equals(\"init\")) {\n                    palco = new Palco();\n                    \n                } else if (cmd.equals(\"add\")) { // PASSO 1 e 4\n                    palco.adicionar(new Instrumento(tokens[1]));\n                    \n                } else if (cmd.equals(\"violao\")) { // PASSO 3\n                    // TODO: Descomente\n                    palco.adicionar(new Violao(tokens[1]));\n                    \n                } else if (cmd.equals(\"piano\")) { // PASSO 3\n                    // TODO: Descomente\n                    palco.adicionar(new Piano(tokens[1]));\n                    \n                } else if (cmd.equals(\"afinar\")) { // PASSO 1\n                    Instrumento i = palco.buscar(tokens[1]);\n                    if (i != null) System.out.println(i.afinar());\n                    \n                } else if (cmd.equals(\"tocar\")) { // PASSO 2\n                    Instrumento i = palco.buscar(tokens[1]);\n                    if (i != null) System.out.println(i.tocar());\n                    \n                } else if (cmd.equals(\"show\")) { // PASSO 4\n                    palco.showAoVivo();\n                }\n                \n            } catch (InstrumentoDesafinadoException e) {\n                System.out.println(\"ERRO: \" + e.getMessage());\n            } catch (Exception e) {\n                System.out.println(\"Erro: \" + e.getMessage());\n            }\n        }\n        scanner.close();\n    }\n}\n}",
+            "lines": "167"
+        }
+    ]
+}

@@ -8,3 +8,34 @@
 2025-12-15 17:30:49, EXEC, v:1, k:local@questão1, mode:FULL, rate:33, size:152
 2025-12-15 17:32:27, EXEC, v:1, k:local@questão1, mode:FULL, rate:100, size:151
 2025-12-15 17:33:02, MOVE, v:1, k:local@questão1, mode:BACK
+2025-12-15 18:00:23, MOVE, v:1, k:local@questão2, mode:PICK
+2025-12-15 18:00:26, EXEC, v:1, k:local@questão2, mode:FULL, size:165, fail:COMP
+2025-12-15 18:01:53, EXEC, v:1, k:local@questão2, mode:FULL, size:167, fail:COMP
+2025-12-15 18:03:10, EXEC, v:1, k:local@questão2, mode:FULL, size:167, fail:COMP
+2025-12-15 18:03:54, EXEC, v:1, k:local@questão2, mode:FULL, size:168, fail:COMP
+2025-12-15 18:05:20, EXEC, v:1, k:local@questão2, mode:FULL, size:168, fail:COMP
+2025-12-15 18:05:59, EXEC, v:1, k:local@questão2, mode:FULL, size:168, fail:COMP
+2025-12-15 18:07:32, EXEC, v:1, k:local@questão2, mode:FULL, size:167, fail:COMP
+2025-12-15 18:08:28, MOVE, v:1, k:local@questão2, mode:PICK
+2025-12-15 18:08:31, EXEC, v:1, k:local@questão2, mode:FULL, size:167, fail:COMP
+2025-12-15 18:11:24, EXEC, v:1, k:local@questão2, mode:FULL, size:172, fail:COMP
+2025-12-15 18:12:29, EXEC, v:1, k:local@questão2, mode:FULL, size:175, fail:COMP
+2025-12-15 18:12:37, EXEC, v:1, k:local@questão2, mode:FULL, size:175, fail:COMP
+2025-12-15 18:13:27, EXEC, v:1, k:local@questão2, mode:FULL, size:175, fail:COMP
+2025-12-15 18:14:10, EXEC, v:1, k:local@questão2, mode:FULL, size:174, fail:COMP
+2025-12-15 18:14:42, EXEC, v:1, k:local@questão2, mode:FULL, size:174, fail:COMP
+2025-12-15 18:16:34, EXEC, v:1, k:local@questão2, mode:FULL, size:175, fail:COMP
+2025-12-15 18:17:51, EXEC, v:1, k:local@questão2, mode:FULL, size:175, fail:COMP
+2025-12-15 18:18:55, EXEC, v:1, k:local@questão2, mode:FULL, size:174, fail:COMP
+2025-12-15 18:19:10, EXEC, v:1, k:local@questão2, mode:FULL, size:174, fail:COMP
+2025-12-15 18:19:26, EXEC, v:1, k:local@questão2, mode:FULL, size:173, fail:COMP
+2025-12-15 18:20:23, EXEC, v:1, k:local@questão2, mode:FULL, size:173, fail:COMP
+2025-12-15 18:20:53, EXEC, v:1, k:local@questão2, mode:FULL, size:173, fail:COMP
+2025-12-15 18:21:17, EXEC, v:1, k:local@questão2, mode:FULL, size:173, fail:COMP
+2025-12-15 18:21:20, EXEC, v:1, k:local@questão2, mode:FULL, fail:COMP
+2025-12-15 18:23:49, EXEC, v:1, k:local@questão2, mode:FULL, size:172, fail:COMP
+2025-12-15 18:25:53, EXEC, v:1, k:local@questão2, mode:FULL, size:166, fail:COMP
+2025-12-15 18:28:17, EXEC, v:1, k:local@questão2, mode:FULL, size:166, fail:COMP
+2025-12-15 18:29:17, EXEC, v:1, k:local@questão2, mode:FULL, size:165, fail:COMP
+2025-12-15 18:29:48, EXEC, v:1, k:local@questão2, mode:FULL, size:167, fail:COMP
+2025-12-15 18:30:24, MOVE, v:1, k:local@questão2, mode:BACK

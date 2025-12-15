@@ -6,7 +6,7 @@ import java.util.Scanner;
 // ==================================================================================
 class InstrumentoDesafinadoException extends Exception {
     public InstrumentoDesafinadoException(String nome) {
-        
+        super("O instrumento " + nome + " esta desafinado! Nao pode tocar.");
     }
 }
 
@@ -17,40 +17,63 @@ class Instrumento {
     protected String nome;
     protected boolean afinado;
 
-    public Instrumento(String nome, boolean afinado) {
+    public Instrumento(String nome) {
        this.nome = nome;
-       boolean afinado = false;
+       afinado = false;
     }
 
     public String getNome() {
         return this.nome;
     }
-    ]
+    
     public String afinar() {
-       if()
-        return "";
+        afinado = true;
+        return "O instrumento "+nome+" foi afinado com sucesso!";
     }
 
     // PASSO 2: 
     public String tocar() throws InstrumentoDesafinadoException {
-        if(afinado == true){
-            return "Tocando instrumento generico.";
-        }
-        
+       if(afinado == true){
+        return "Tocando instrumento generico.";
+       }else{
+        throw new InstrumentoDesafinadoException(nome);
+       }
     }
-}
+    }
+
 
 // ==================================================================================
 // PASSO 3: CLASSES FILHAS
+
+
 // ==================================================================================
 
-// class Violao extends Instrumento {
-  
-// }
+ class Violao extends Instrumento {
+  public Violao(String nome){
+    super(nome);
+  }
 
-// class Piano extends Instrumento {
-   
-// }
+  public String tocar(){
+    if(afinado == true){
+        return "Violao " + nome + " tocou: STRUMMM!";
+       }else{
+        throw new InstrumentoDesafinadoException(nome);
+       }
+ }
+
+class Piano extends Instrumento {
+    public Piano(String nome){
+    super(nome);
+  }
+
+  public String tocar(){
+    if(afinado == true){
+        return "Piano "+ nome + " tocou: PLIN PLIN PLIN!";
+       }else{
+        throw new InstrumentoDesafinadoException(nome);
+       }
+  }
+
 
 
 // ==================================================================================
@@ -60,17 +83,27 @@ class Palco {
     private ArrayList<Instrumento> instrumentos = new ArrayList<>();
 
     public void adicionar(Instrumento i) {
-        
+        instrumentos.add(i);
+        System.out.println(i.nome +" adicionado ao palco.");
     }
 
     public Instrumento buscar(String nome) {
+        for(int i = 0; i < instrumentos.size(); i++){
+            if(instrumentos.get(i).equals(nome)){
+                return instrumentos.get(i);
+            } else {
+                return null;
+            }
+            
+        }
         
-        return null;
     }
 
     public void showAoVivo() {
         System.out.println("--- INICIANDO O SHOW ---");
-       
+       for(int i = 0; i < instrumentos.size(); i++){
+        System.out.println(instrumentos.get(i).tocar());
+       }
         
         System.out.println("--- FIM DO SHOW ---");
     }
@@ -104,11 +137,11 @@ public class Main {
                     
                 } else if (cmd.equals("violao")) { // PASSO 3
                     // TODO: Descomente
-                    // palco.adicionar(new Violao(tokens[1]));
+                    palco.adicionar(new Violao(tokens[1]));
                     
                 } else if (cmd.equals("piano")) { // PASSO 3
                     // TODO: Descomente
-                    // palco.adicionar(new Piano(tokens[1]));
+                    palco.adicionar(new Piano(tokens[1]));
                     
                 } else if (cmd.equals("afinar")) { // PASSO 1
                     Instrumento i = palco.buscar(tokens[1]);
@@ -130,4 +163,5 @@ public class Main {
         }
         scanner.close();
     }
+}
 }
