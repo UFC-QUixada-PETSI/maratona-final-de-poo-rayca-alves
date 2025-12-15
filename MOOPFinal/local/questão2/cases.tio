@@ -1,0 +1,80 @@
+>>>>>>>> INSERT 1 Passo 1 - Instrumento e Afinacao
+init
+add Flauta
+afinar Flauta
+add Tambor
+afinar Tambor
+end
+======== EXPECT
+$init
+$add Flauta
+Flauta adicionado ao palco.
+$afinar Flauta
+O instrumento Flauta foi afinado com sucesso!
+$add Tambor
+Tambor adicionado ao palco.
+$afinar Tambor
+O instrumento Tambor foi afinado com sucesso!
+$end
+<<<<<<<< FINISH
+
+>>>>>>>> INSERT 2 Passo 2 - Excecao e Tocar
+init
+add Saxofone
+tocar Saxofone
+afinar Saxofone
+tocar Saxofone
+end
+======== EXPECT
+$init
+$add Saxofone
+Saxofone adicionado ao palco.
+$tocar Saxofone
+ERRO: O instrumento Saxofone esta desafinado! Nao pode tocar.
+$afinar Saxofone
+O instrumento Saxofone foi afinado com sucesso!
+$tocar Saxofone
+Tocando instrumento generico.
+$end
+<<<<<<<< FINISH
+
+>>>>>>>> INSERT 2 Passo 2 - Excecao e Tocar
+init
+add Saxofone
+tocar Saxofone
+afinar Saxofone
+tocar Saxofone
+end
+======== EXPECT
+$init
+$add Saxofone
+Saxofone adicionado ao palco.
+$tocar Saxofone
+ERRO: O instrumento Saxofone esta desafinado! Nao pode tocar.
+$afinar Saxofone
+O instrumento Saxofone foi afinado com sucesso!
+$tocar Saxofone
+Tocando instrumento generico.
+$end
+<<<<<<<< FINISH
+
+>>>>>>>> INSERT 2 Passo 2 - Excecao e Tocar
+init
+add Saxofone
+tocar Saxofone
+afinar Saxofone
+tocar Saxofone
+end
+======== EXPECT
+$init
+$add Saxofone
+Saxofone adicionado ao palco.
+$tocar Saxofone
+ERRO: O instrumento Saxofone esta desafinado! Nao pode tocar.
+$afinar Saxofone
+O instrumento Saxofone foi afinado com sucesso!
+$tocar Saxofone
+Tocando instrumento generico.
+$end
+<<<<<<<< FINISH
+

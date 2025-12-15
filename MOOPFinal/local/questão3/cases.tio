@@ -1,0 +1,86 @@
+>>>>>>>> INSERT 1 Setup Basico
+add_espada Excalibur 50 10
+add_cajado GandalfStaff 20 40
+create_knight Arthur
+create_mage Merlin
+equipar 0 0
+equipar 1 1
+status_arma 0
+end
+======== EXPECT
+$add_espada Excalibur 50 10
+$add_cajado GandalfStaff 20 40
+$create_knight Arthur
+$create_mage Merlin
+$equipar 0 0
+Arthur equipou Excalibur
+$equipar 1 1
+Merlin equipou GandalfStaff
+$status_arma 0
+Arma: Excalibur | Dano: 50 | Durabilidade: 100
+$end
+<<<<<<<< FINISH
+
+>>>>>>>> INSERT 2 Ataque Polimorfico
+add_espada Claymore 30 5
+add_cajado Varinha 10 20
+create_knight Guts
+create_mage Harry
+equipar 0 0
+equipar 1 1
+atacar 0
+atacar 1
+end
+======== EXPECT
+$add_espada Claymore 30 5
+$add_cajado Varinha 10 20
+$create_knight Guts
+$create_mage Harry
+$equipar 0 0
+Guts equipou Claymore
+$equipar 1 1
+Harry equipou Varinha
+$atacar 0
+Cavaleiro Guts atacou com Claymore causando 40 de dano fisíco.
+$atacar 1
+Mago Harry lancou feitiço com Varinha causando 30 de dano magico.
+$end
+<<<<<<<< FINISH
+
+>>>>>>>> INSERT 3 Hardcore Exceptions
+add_espada Faca 10 0
+create_knight Soldier
+atacar 0
+equipar 0 0
+atacar 0
+atacar 0
+atacar 0
+atacar 0
+atacar 0
+descansar 0
+atacar 0
+end
+======== EXPECT
+$add_espada Faca 10 0
+$create_knight Soldier
+$atacar 0
+FALHA: O personagem esta desarmado!
+$equipar 0 0
+Soldier equipou Faca
+$atacar 0
+Cavaleiro Soldier atacou com Faca causando 15 de dano fisíco.
+$atacar 0
+Cavaleiro Soldier atacou com Faca causando 15 de dano fisíco.
+$atacar 0
+Cavaleiro Soldier atacou com Faca causando 15 de dano fisíco.
+$atacar 0
+Cavaleiro Soldier atacou com Faca causando 15 de dano fisíco.
+$atacar 0
+FALHA: Soldier está exausto e não consegue se mover!
+$descansar 0
+Soldier descansou. Estamina: 20
+$atacar 0
+FALHA: Soldier está exausto e não consegue se mover!
+$end
+<<<<<<<< FINISH
+

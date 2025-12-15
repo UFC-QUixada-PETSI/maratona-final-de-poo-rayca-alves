@@ -1,0 +1,52 @@
+>>>>>>>> INSERT 1 Passo 1 - Midia Base
+init
+midia ArquivoGenérico
+tocar_midia
+tocar_midia
+end
+======== EXPECT
+$init
+$midia ArquivoGenérico
+$tocar_midia
+Reproduzindo midia: ArquivoGenérico
+$tocar_midia
+ArquivoGenérico ja esta reproduzindo.
+$end
+<<<<<<<< FINISH
+
+>>>>>>>> INSERT 2 Passo 2 - Classes Filhas
+init
+filme Titanic Cameron
+musica Thriller MichaelJackson
+playlist
+end
+======== EXPECT
+$init
+$filme Titanic Cameron
+$musica Thriller MichaelJackson
+$playlist
+--- PLAYLIST ---
+Exibindo filme: Titanic do diretor Cameron
+Tocando musica: Thriller - MichaelJackson
+$end
+<<<<<<<< FINISH
+
+>>>>>>>> INSERT 3 Passo 3 - Polimorfismo
+init
+midia Introducao
+filme Inception Nolan
+musica Hello Adele
+playlist
+end
+======== EXPECT
+$init
+$midia Introducao
+$filme Inception Nolan
+$musica Hello Adele
+$playlist
+--- PLAYLIST ---
+Reproduzindo midia: Introducao
+Exibindo filme: Inception do diretor Nolan
+Tocando musica: Hello - Adele
+$end
+<<<<<<<< FINISH
