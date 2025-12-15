@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-15_17-27-38",
+            "content": "@@ -3901,33 +3901,33 @@\n          cineDev\n-.\n+ \n adicionar(midiaT\n",
+            "lines": "153"
+        },
+        {
+            "label": "2025-12-15_17-28-05",
+            "content": "@@ -1729,22 +1729,21 @@\n  public \n-Musica\n+Filme\n  (String\n@@ -2190,17 +2190,16 @@\n uzindo.%22\n-;\n %0A       \n",
+            "lines": "153"
+        },
+        {
+            "label": "2025-12-15_17-28-50",
+            "content": "@@ -1621,33 +1621,32 @@\n a reproduzindo.%22\n-;\n %0A        %7D%0A     \n",
+            "lines": "153"
+        },
+        {
+            "label": "2025-12-15_17-29-01",
+            "content": "@@ -703,33 +703,32 @@\n a reproduzindo.%22\n-;\n %0A        %7D else \n",
+            "lines": "153"
+        },
+        {
+            "label": "2025-12-15_17-29-16",
+            "content": "@@ -494,16 +494,29 @@\n g titulo\n+, int duracao\n ) %7B%0A    \n@@ -533,32 +533,64 @@\n itulo = titulo;%0A\n+        this.duracao = duracao;%0A\n         this.toc\n",
+            "lines": "153"
+        },
+        {
+            "label": "2025-12-15_17-30-12",
+            "content": "@@ -1256,32 +1256,45 @@\n  (String titulo,\n+ int duracao,\n  String diretor)\n@@ -1307,32 +1307,41 @@\n     super(titulo\n+, duracao\n );%0A        this.\n@@ -1708,16 +1708,29 @@\n  titulo,\n+ int duracao,\n  String \n@@ -1759,16 +1759,25 @@\n r(titulo\n+, duracao\n );%0A     \n",
+            "lines": "152"
+        },
+        {
+            "label": "2025-12-15_17-30-49",
+            "content": "@@ -2570,24 +2570,25 @@\n LIST ---%22);%0A\n+%0A\n         for(\n@@ -2637,35 +2637,16 @@\n         \n-System.out.println(\n playlist\n@@ -2652,33 +2652,32 @@\n t.get(i).tocar()\n-)\n ;%0A        %7D%0A    \n",
+            "lines": "152"
+        },
+        {
+            "label": "2025-12-15_17-32-27",
+            "content": "import java.util.Scanner;\nimport java.util.ArrayList;\n\n// ==================================================================================\n// PASSO 1: CLASSE M\u00c3E (MIDIA)\n// ==================================================================================\nclass Midia {\n    // TODO: Atributos privados (titulo, duracao, tocando)\n    protected String titulo; // Use protected ou private com getters se preferir\n    protected int duracao;\n    protected boolean tocando;\n\n    public Midia(String titulo) {\n        this.titulo = titulo;\n        this.tocando = false;\n    }\n\n    public String tocar() {\n        if(tocando){\n            return titulo + \" ja esta reproduzindo.\";\n        } else {\n            tocando = true;\n            return \"Reproduzindo midia: \" + titulo;\n        }\n        // TODO: \n        // Se j\u00e1 estiver tocando, retorne \"[titulo] ja esta reproduzindo.\"\n        // Se n\u00e3o, mude tocando para true e retorne \"Reproduzindo midia: [titulo]\"\n    }\n}\n\n// ==================================================================================\n// PASSO 2: SUBCLASSES (FILME E MUSICA)\n// ==================================================================================\n\nclass Filme extends Midia {\n    protected String diretor;\n\n    public Filme (String titulo, String diretor){\n        super(titulo);\n        this.diretor = diretor;\n    }\n    \n\n    public String tocar(){\n        if(!tocando){\n        tocando = true;\n        return \"Exibindo filme: \" + titulo + \" do diretor \" + diretor ;\n        } else {\n            return titulo + \" ja esta reproduzindo.\";\n        }\n       \n    }\n\n}\n\nclass Musica extends Midia {\n    protected String artista;\n\n    public Musica (String titulo, String artista){\n        super(titulo);\n        this.artista = artista;\n    }\n   \n    \n    // TODO: Sobrescreva o m\u00e9todo tocar().\n    // Mude tocando = true.\n    // Retorne \"Tocando musica: [titulo] - [artista]\"\n\n    public String tocar(){\n        if(!tocando){\n        tocando = true;\n        return \"Tocando musica: \" + titulo + \" - \" + artista;\n        } else {\n            return titulo + \" ja esta reproduzindo.\";\n        }\n       \n    }\n}\n\n\n// ==================================================================================\n// PASSO 3: GERENCIADOR (PLATAFORMA)\n// ==================================================================================\nclass Plataforma {\n    private ArrayList<Midia> playlist = new ArrayList<>();\n\n    public void adicionar(Midia m) {\n        playlist.add(m);\n    }\n\n    public void reproduzirTudo() {\n        System.out.println(\"--- PLAYLIST ---\");\n        for(int i = 0; i < playlist.size(); i++){\n            System.out.println(playlist.get(i).tocar());\n        }\n        // TODO: Percorra a lista e chame o m\u00e9todo tocar() de cada elemento.\n        // Imprima o resultado de cada chamada.\n    }\n}\n\n// ==================================================================================\n// MAIN\n// ==================================================================================\npublic class Main {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        Plataforma cineDev = new Plataforma();\n        // Para testes unit\u00e1rios manuais do passo 1\n        Midia midiaTemp = null; \n\n        while (scanner.hasNextLine()) {\n            String linha = scanner.nextLine().trim();\n            if (linha.isEmpty()) continue;\n            System.out.println(\"$\" + linha);\n            String[] tokens = linha.split(\" \");\n            String cmd = tokens[0].toLowerCase();\n\n            try {\n                switch (cmd) {\n                    case \"end\": scanner.close(); return;\n                    case \"init\": cineDev = new Plataforma(); break;\n\n                    case \"midia\": // PASSO 1\n                        midiaTemp = new Midia(tokens[1]);\n                        cineDev.adicionar(midiaTemp);\n                        break;\n                    \n                    case \"tocar_midia\": // PASSO 1\n                        if (midiaTemp != null) System.out.println(midiaTemp.tocar());\n                        break;\n\n                    case \"filme\": // PASSO 2\n                        // Ex: filme Matrix Wachowski\n                        // TODO: Descomente\n                        cineDev.adicionar(new Filme(tokens[1], tokens[2]));\n                        break;\n\n                    case \"musica\": // PASSO 2\n                        // Ex: musica HeyJude Beatles\n                        // TODO: Descomente\n                        cineDev.adicionar(new Musica(tokens[1], tokens[2]));\n                        break;\n\n                    case \"playlist\": // PASSO 3\n                        cineDev.reproduzirTudo();\n                        break;\n                }\n            } catch (Exception e) { System.out.println(\"Erro: \" + e.getMessage()); }\n        }\n    }\n}",
+            "lines": "151"
+        }
+    ]
+}

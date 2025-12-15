@@ -17,23 +17,26 @@ class Instrumento {
     protected String nome;
     protected boolean afinado;
 
-    public Instrumento(String nome) {
-       
+    public Instrumento(String nome, boolean afinado) {
+       this.nome = nome;
+       boolean afinado = false;
     }
 
     public String getNome() {
         return this.nome;
     }
-
+    ]
     public String afinar() {
-       
+       if()
         return "";
     }
 
     // PASSO 2: 
     public String tocar() throws InstrumentoDesafinadoException {
-    
-        return "Tocando instrumento generico.";
+        if(afinado == true){
+            return "Tocando instrumento generico.";
+        }
+        
     }
 }
 

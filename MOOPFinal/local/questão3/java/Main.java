@@ -1,6 +1,32 @@
 import java.util.Scanner;
 
 // O ALUNO DEVE CRIAR AS CLASSES AQUI EM CIMA OU EM ARQUIVOS SEPARADOS
+class Arma {
+     String nome;
+     int danoBase;
+     int durabilidade; // (0-100)
+
+}
+
+class Espada extends Arma{
+    int afiacao;
+
+    public int dano(int base){
+        dano = base + afiacao;
+        return dano;
+    }
+
+}
+
+class Cajado extends Arma {
+    String poderMagico;
+
+     public int dano(int base){
+
+        return dano;
+    }
+
+}
 
 public class Main {
     public static void main(String[] args) {
